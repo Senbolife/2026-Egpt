@@ -3,340 +3,318 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025 埃及極致探險 | 專屬行程提案</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>2025 埃及夢幻之旅 | Private Luxury Trip</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #D4AF37; /* 法老金 */
-            --secondary: #111111; /* 深遂黑 */
-            --bg: #F5F5F0; /* 紙莎草白 */
-            --text: #333;
+            --gold: #C6A87C;
+            --dark: #0F172A;
+            --light: #F8FAFC;
         }
 
         body {
-            font-family: 'Noto Sans TC', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
+            font-family: 'Lato', sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
         }
 
-        /* Header */
+        /* Header - IG 風格大圖 */
         header {
-            /* 使用維基百科超穩定連結 */
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://upload.wikimedia.org/wikipedia/commons/a/af/All_Gizah_Pyramids.jpg') no-repeat center center/cover;
-            height: 70vh;
+            height: 85vh;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('http://googleusercontent.com/image_collection/image_retrieval/2939560406698095525_0') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
             color: white;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            text-align: center;
         }
 
         header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
+            font-family: 'Cinzel', serif;
+            font-size: 5rem;
+            letter-spacing: 10px;
             margin: 0;
-            letter-spacing: 5px;
-            text-transform: uppercase;
+            text-shadow: 2px 2px 20px rgba(0,0,0,0.8);
         }
 
         header p {
             font-size: 1.2rem;
-            margin-top: 15px;
-            background: rgba(0,0,0,0.6);
-            padding: 8px 20px;
-            border-radius: 4px;
-        }
-
-        /* Container */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
-
-        /* Map Section */
-        .map-section {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            margin-bottom: 60px;
-            text-align: center;
-            border-top: 4px solid var(--primary);
-        }
-
-        .route-visual {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
+            letter-spacing: 3px;
             margin-top: 20px;
+            text-transform: uppercase;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
+            padding: 10px 30px;
+            border: 1px solid rgba(255,255,255,0.3);
         }
 
-        .stop {
-            width: 120px;
-            text-align: center;
+        .container {
+            max-width: 1200px;
+            margin: -100px auto 50px; /* 上移覆蓋 Header */
+            position: relative;
+            z-index: 10;
+            padding: 0 20px;
         }
 
-        .stop-icon {
-            font-size: 2.5rem;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        /* Section Titles */
-        .section-header {
-            display: flex;
-            align-items: baseline;
-            margin-bottom: 20px;
-            margin-top: 60px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
-        }
-
-        .section-num {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            color: var(--primary);
-            margin-right: 15px;
-            line-height: 1;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            color: var(--secondary);
-            margin: 0;
-        }
-
-        /* Highlight Card */
-        .highlight-card {
+        /* 卡片設計 */
+        .card {
             background: white;
-            border-radius: 15px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            margin-bottom: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 60px;
         }
 
-        .card-content {
-            padding: 30px;
+        .card-header {
+            padding: 40px 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
         }
 
-        .tag {
-            display: inline-block;
-            background: #333;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin-right: 5px;
-            margin-bottom: 15px;
+        .card-num {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            color: #f0f0f0;
+            line-height: 0.8;
+            position: absolute;
+            left: 20px;
+            top: -20px;
+            z-index: 0;
         }
-        .tag.gold { background: var(--primary); }
 
-        /* Image Grid (穩定版) */
-        .img-grid {
+        .card-title {
+            font-size: 2rem;
+            color: var(--dark);
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-desc {
+            padding: 0 40px 30px;
+            color: #666;
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
+        /* IG 風格拼貼牆 */
+        .gallery {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 5px;
-            height: 250px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 250px 250px;
+            gap: 10px;
+            padding: 10px;
         }
 
-        .img-grid img {
+        .gallery img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.5s ease;
             cursor: pointer;
-            transition: opacity 0.3s;
-            background-color: #eee; /* 載入前的底色 */
         }
 
-        .img-grid img:hover { opacity: 0.9; }
+        .gallery img:hover {
+            transform: scale(1.03);
+            filter: brightness(1.1);
+        }
 
-        /* 特殊排版：第一張大圖 */
-        .img-grid.layout-1 { grid-template-columns: 2fr 1fr 1fr; }
-        .img-grid.layout-1 img:nth-child(1) { grid-row: 1 / 3; height: 100%; }
-        
-        /* Itinerary Table */
-        .itinerary {
-            width: 100%;
-            border-collapse: collapse;
+        /* 拼貼佈局：第一張大圖 */
+        .gallery-item-main {
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+        }
+
+        /* 標籤 */
+        .tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .tag {
+            background: var(--dark);
+            color: var(--gold);
+            padding: 5px 15px;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 50px;
+        }
+
+        /* 行程表 */
+        .itinerary-box {
             background: white;
-            margin-top: 50px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
-
-        .itinerary th, .itinerary td {
-            padding: 15px;
+        .day-row {
+            display: flex;
+            padding: 20px 0;
             border-bottom: 1px solid #eee;
-            text-align: left;
         }
-
-        .itinerary th {
-            background-color: var(--secondary);
-            color: var(--primary);
+        .day-num {
+            width: 80px;
+            font-weight: bold;
+            color: var(--gold);
         }
-
-        .day-col { font-weight: bold; color: var(--primary); width: 80px; }
 
         @media (max-width: 768px) {
-            header h1 { font-size: 2.2rem; }
-            .img-grid { grid-template-columns: 1fr 1fr; height: auto; }
-            .img-grid.layout-1 { grid-template-columns: 1fr 1fr; }
-            .img-grid.layout-1 img:nth-child(1) { grid-column: 1 / -1; height: 200px; }
-            .img-grid img { height: 150px; }
+            header h1 { font-size: 3rem; }
+            .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 200px 200px 200px; }
+            .gallery-item-main { grid-column: 1 / 3; grid-row: 1 / 2; }
+            .card-header { flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>EGYPT 2025</h1>
-    <p>海陸空極致探險・千年文明巡禮</p>
+    <h1>EGYPT</h1>
+    <p>2025 Luxury Adventure</p>
 </header>
 
 <div class="container">
 
-    <div class="map-section">
-        <h2>🗺️ 行程總覽</h2>
-        <div class="route-visual">
-            <div class="stop"><span class="stop-icon">🏛️</span><h4>開羅</h4><small>金字塔飛行</small></div>
-            <div class="stop"><span class="stop-icon">🏜️</span><h4>黑白沙漠</h4><small>星空露營</small></div>
-            <div class="stop"><span class="stop-icon">✈️</span><h4>阿布辛貝</h4><small>巨型神殿</small></div>
-            <div class="stop"><span class="stop-icon">🚢</span><h4>尼羅河</h4><small>五星遊輪</small></div>
-            <div class="stop"><span class="stop-icon">🎈</span><h4>路克索</h4><small>帝王谷熱氣球</small></div>
-            <div class="stop"><span class="stop-icon">🤿</span><h4>紅海</h4><small>潛水度假</small></div>
+    <div class="card">
+        <div class="card-header">
+            <h2 class="card-title">01. Giza Pyramids from the Sky</h2>
+            <div class="tags">
+                <span class="tag">Paramotor</span>
+                <span class="tag">Horse Riding</span>
+            </div>
+        </div>
+        <p class="card-desc">
+            這不是普通的觀光，這是極限冒險。清晨在金字塔旁起飛，雙腳懸空，看著陽光灑在古老的石頭上。降落後，換上阿拉伯馬，在沙漠中拍出宛如電影海報的大片。
+        </p>
+        <div class="gallery">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/2939560406698095525_0" class="gallery-item-main" alt="Paramotor View">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/2939560406698095525_1" alt="Pyramids">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/2939560406698095525_2" alt="Horse">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/2939560406698095525_3" alt="Sphinx">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/2939560406698095525_4" alt="Sunset">
         </div>
     </div>
 
-    <div class="section-header">
-        <span class="section-num">01</span>
-        <h2 class="section-title">吉薩金字塔群 & 飛行傘</h2>
-    </div>
-    <div class="highlight-card">
-        <div class="img-grid layout-1">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg" alt="金字塔大景" onerror="this.src='https://placehold.co/600x400?text=Pyramids'">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Great_Sphinx_of_Giza_-_20080716a.jpg" alt="獅身人面像" onerror="this.src='https://placehold.co/300x300?text=Sphinx'">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/All_Gizah_Pyramids.jpg" alt="金字塔群" onerror="this.src='https://placehold.co/300x300?text=Giza'">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Egypt.Giza.Sphinx.01.jpg" alt="側面視角" onerror="this.src='https://placehold.co/300x300?text=Egypt'">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Camel_ride_by_the_Pyramids.jpg" alt="駱駝與金字塔" onerror="this.src='https://placehold.co/300x300?text=Camel'">
+    <div class="card">
+        <div class="card-header">
+            <h2 class="card-title">02. White Desert Camping</h2>
+            <div class="tags">
+                <span class="tag">Glamping</span>
+                <span class="tag">Milky Way</span>
+            </div>
         </div>
-        <div class="card-content">
-            <span class="tag gold">開羅</span><span class="tag">動力飛行傘</span><span class="tag">騎馬</span>
-            <p>清晨搭乘 <strong>Paramotor (動力飛行傘)</strong>，以上帝視角俯瞰 4500 年前的奇蹟。飛行結束後進入景區，安排<strong>沙漠騎馬</strong>，環繞在金字塔周邊，避開人潮拍出史詩級大片。</p>
-        </div>
-    </div>
-
-    <div class="section-header">
-        <span class="section-num">02</span>
-        <h2 class="section-title">黑白沙漠露營</h2>
-    </div>
-    <div class="highlight-card">
-        <div class="img-grid">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/White_Desert.jpg" alt="白沙漠香菇石">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Black_Desert_-_Bahariya.JPG" alt="黑沙漠">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/White_Desert_National_Park_2.jpg" alt="奇岩怪石">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Camping_in_the_White_Desert.jpg" alt="沙漠露營">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Crystal_Mountain_Egypt.JPG" alt="水晶山">
-        </div>
-        <div class="card-content">
-            <span class="tag gold">西部沙漠</span><span class="tag">露營</span><span class="tag">觀星</span>
-            <p>深入荒野，這裡有彷彿月球表面的<strong>白沙漠</strong>與火山岩覆蓋的<strong>黑沙漠</strong>。搭乘 4x4 吉普車衝沙，晚上在無光害的沙漠中紮營，享用貝都因烤雞晚餐，躺在沙丘上看著令人屏息的銀河。</p>
+        <p class="card-desc">
+            彷彿置身異星球的白色奇岩怪石。我們將駕駛 4x4 吉普車深入無人區，在篝火旁享用貝都因晚餐，抬頭就是毫無光害的銀河星空。這是在城市絕對無法體驗的寂靜與壯闊。
+        </p>
+        <div class="gallery">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/1218122635556837235_0" class="gallery-item-main" alt="Starry Night">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/1218122635556837235_1" alt="White Rock">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/1218122635556837235_2" alt="Campfire">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/1218122635556837235_3" alt="Desert">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/1218122635556837235_4" alt="Jeep">
         </div>
     </div>
 
-    <div class="section-header">
-        <span class="section-num">03</span>
-        <h2 class="section-title">阿布辛貝神殿</h2>
-    </div>
-    <div class="highlight-card">
-        <div class="img-grid layout-1">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Abu_Simbel_Temple_May_2009.jpg" alt="阿布辛貝正面">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Abu_Simbel_Temple_of_Nefertari.jpg" alt="妮菲塔莉神殿">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Abu_Simbel_Temple_Statues.jpg" alt="巨大雕像">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Nubian_Village_Aswan.jpg" alt="努比亞村">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Philae_Temple_Aswan.jpg" alt="費萊神殿">
+    <div class="card">
+        <div class="card-header">
+            <h2 class="card-title">03. The Great Temple of Abu Simbel</h2>
+            <div class="tags">
+                <span class="tag">Nubian</span>
+                <span class="tag">History</span>
+            </div>
         </div>
-        <div class="card-content">
-            <span class="tag gold">亞斯文</span><span class="tag">飛機往返</span><span class="tag">世界遺產</span>
-            <p>搭飛機直抵最南端，參觀震撼的<strong>阿布辛貝神殿</strong>，這是拉美西斯二世的榮耀。回到亞斯文後，我們還會前往色彩繽紛的<strong>努比亞村</strong>，這裡充滿香料味與鱷魚圖騰，是絕佳的攝影點。</p>
-        </div>
-    </div>
-
-    <div class="section-header">
-        <span class="section-num">04</span>
-        <h2 class="section-title">尼羅河遊輪 & 熱氣球</h2>
-    </div>
-    <div class="highlight-card">
-        <div class="img-grid">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Nile_River_and_luxor.jpg" alt="尼羅河帆船">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Luxor_from_the_air.jpg" alt="熱氣球">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Kom_Ombo_Temple_01.jpg" alt="康翁波神殿">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Edfu_Temple_Pylon.jpg" alt="艾德夫神殿">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Karnak_Temple_Great_Hypostyle_Hall.jpg" alt="卡納克神殿">
-        </div>
-        <div class="card-content">
-            <span class="tag gold">五星遊輪</span><span class="tag">風帆船</span><span class="tag">熱氣球</span>
-            <p>入住五星級尼羅河遊輪，白天靠岸參觀神殿，晚上在甲板泳池畔看星星。抵達路克索後，特別安排<strong>日出熱氣球</strong>，漂浮在帝王谷與綠洲之上，景色壯麗絕美。</p>
+        <p class="card-desc">
+            搭飛機直抵埃及最南端。四座巨大的拉美西斯二世雕像矗立在納賽爾湖畔，見證了三千年的歷史與現代搬遷工程的奇蹟。這裡的光影，隨便拍都是國家地理雜誌等級。
+        </p>
+        <div class="gallery">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/162247838709815580_0" class="gallery-item-main" alt="Abu Simbel Main">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/162247838709815580_1" alt="Statues">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/162247838709815580_2" alt="Temple">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/162247838709815580_3" alt="Inside">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/162247838709815580_4" alt="Lake Nasser">
         </div>
     </div>
 
-    <div class="section-header">
-        <span class="section-num">05</span>
-        <h2 class="section-title">紅海潛水 & 網美咖啡廳</h2>
-    </div>
-    <div class="highlight-card">
-        <div class="img-grid layout-1">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Red_Sea_coral_reef.jpg" alt="紅海珊瑚">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Red_Sea_underwater.jpg" alt="潛水">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Naama_Bay_Sharm_el-Sheikh.jpg" alt="夏姆錫克海灘">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Fanous_East_Red_Sea_Egypt.jpg" alt="清澈海水">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Sharm_el-Sheikh_night.jpg" alt="夏姆錫克夜景">
+    <div class="card">
+        <div class="card-header">
+            <h2 class="card-title">04. Nile Cruise & Luxor Balloon</h2>
+            <div class="tags">
+                <span class="tag">Luxury Cruise</span>
+                <span class="tag">Sunrise</span>
+            </div>
         </div>
-        <div class="card-content">
-            <span class="tag" style="background:#006080;">夏姆錫克</span><span class="tag">潛水</span><span class="tag">Farsha Cafe</span>
-            <p>前往紅海潛水勝地—夏姆錫克 (Sharm El-Sheikh)。這裡有世界頂級的珊瑚礁。傍晚前往爆紅的 <strong>Farsha Mountain Lounge</strong>，依懸崖而建，掛滿數千盞異國燈籠，彷彿走進一千零一夜。</p>
-        </div>
-    </div>
-
-    <div class="section-header">
-        <span class="section-num">06</span>
-        <h2 class="section-title">開羅：市集與城堡</h2>
-    </div>
-    <div class="highlight-card">
-        <div class="img-grid">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Cairo_-_Khan_el-Khalili.jpg" alt="哈利利市集">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Mosque_of_Muhammad_Ali_Citadel_Cairo.jpg" alt="薩拉丁城堡">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/El_Fishawy_Cafe.jpg" alt="費沙維咖啡館">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Egyptian_Museum_Cairo_Entrance.jpg" alt="埃及博物館">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Cairo_Tower_View.jpg" alt="開羅市景">
-        </div>
-        <div class="card-content">
-            <span class="tag gold">購物</span><span class="tag">歷史</span>
-            <p>最後回到開羅，前往薩拉丁城堡俯瞰全城。最後在迷宮般的<strong>哈利利市集</strong>採購香精、銀飾，一定要在 El Fishawy 咖啡館喝一杯薄荷紅茶，為旅程畫下句點。</p>
+        <p class="card-desc">
+            這是埃及最浪漫的移動方式。入住五星遊輪，在甲板泳池邊喝雞尾酒看兩岸風景。抵達路克索後，清晨搭乘熱氣球升空，看著太陽從帝王谷的陵墓與綠洲間緩緩升起，夢幻至極。
+        </p>
+        <div class="gallery">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/12005434951410920569_0" class="gallery-item-main" alt="Cruise Pool">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/15208889988493476492_0" alt="Balloons">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/12005434951410920569_2" alt="Nile View">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/15208889988493476492_1" alt="Sunrise">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/12005434951410920569_3" alt="Luxury Room">
         </div>
     </div>
 
-    <h2 style="margin-top:60px; text-align:center;">📅 12 天詳細行程表</h2>
-    <table class="itinerary">
-        <tr><th>Day</th><th>行程內容</th></tr>
-        <tr><td class="day-col">Day 1</td><td>抵達開羅 (Cairo) ➜ 接機 ➜ 入住吉薩區飯店 <strong>(在飯店露台看金字塔聲光秀)</strong></td></tr>
-        <tr><td class="day-col">Day 2</td><td><strong>[空] 清晨動力飛行傘</strong> ➜ <strong>[陸]</strong> 進入景區參觀 (人面獅身) ➜ <strong>[騎]</strong> 沙漠騎馬</td></tr>
-        <tr><td class="day-col">Day 3</td><td>開羅出發 ➜ 黑白沙漠之旅 (水晶山、黑沙漠) ➜ <strong>[宿] 沙漠露營</strong> (營火晚餐)</td></tr>
-        <tr><td class="day-col">Day 4</td><td>沙漠日出 ➜ 返回開羅 ➜ 晚班機飛往亞斯文 (Aswan)</td></tr>
-        <tr><td class="day-col">Day 5</td><td><strong>[空] 搭飛機往返阿布辛貝神殿</strong> ➜ 努比亞村 ➜ <strong>[船] Felucca 帆船夕陽</strong></td></tr>
-        <tr><td class="day-col">Day 6</td><td>參觀費萊神殿 ➜ 中午登上 <strong>尼羅河遊輪 (Cruise Check-in)</strong> ➜ 航向康翁波</td></tr>
-        <tr><td class="day-col">Day 7</td><td>遊輪生活 ➜ 參觀艾德夫神殿 (Edfu) ➜ 通過伊斯納水閘 ➜ 抵達路克索</td></tr>
-        <tr><td class="day-col">Day 8</td><td>路克索東岸：卡納克神殿 (Karnak) ➜ 路克索神殿 (Luxor Temple)</td></tr>
-        <tr><td class="day-col">Day 9</td><td><strong>[空] 帝王谷熱氣球</strong> ➜ 西岸：帝王谷、哈特謝普蘇特神殿 ➜ 下午飛往夏姆錫克</td></tr>
-        <tr><td class="day-col">Day 10</td><td><strong>[海] 紅海全日出海</strong>：深潛 (Diving) 或 浮潛</td></tr>
-        <tr><td class="day-col">Day 11</td><td>飯店放鬆 ➜ 下午前往 <strong>Farsha Mountain Lounge</strong> (網美咖啡廳) ➜ 晚班機回開羅</td></tr>
-        <tr><td class="day-col">Day 12</td><td>埃及博物館 (圖坦卡門) ➜ 薩拉丁城堡 ➜ <strong>哈利利大市集</strong> ➜ 前往機場</td></tr>
-    </table>
+    <div class="card">
+        <div class="card-header">
+            <h2 class="card-title">05. Farsha Mountain Lounge & Red Sea</h2>
+            <div class="tags">
+                <span class="tag">Farsha Cafe</span>
+                <span class="tag">Diving</span>
+            </div>
+        </div>
+        <p class="card-desc">
+            這就是您指定的夢幻清單！<strong>Farsha Mountain Lounge</strong> 依懸崖而建，數千盞異國燈籠在夜裡閃爍，彷彿走進一千零一夜。白天則潛入紅海的深藍，與色彩斑斕的熱帶魚共游。
+        </p>
+        <div class="gallery">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/3364587479075600836_0" class="gallery-item-main" alt="Farsha Cafe Night">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/3364587479075600836_1" alt="Lanterns">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/12064086303970437643_0" alt="Diving">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/12064086303970437643_1" alt="Coral">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/3364587479075600836_2" alt="Vibe">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h2 class="card-title">06. Khan el-Khalili Vibes</h2>
+            <div class="tags">
+                <span class="tag">Shopping</span>
+                <span class="tag">Old Cairo</span>
+            </div>
+        </div>
+        <p class="card-desc">
+            迷失在千年的巷弄中。香水瓶、銀飾、水煙、香料，這裡是攝影師的天堂。一定要去 El Fishawy 咖啡館，在充滿歷史感的鏡子與木雕環繞下，喝一杯埃及薄荷紅茶。
+        </p>
+        <div class="gallery">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/16415413556413588019_0" class="gallery-item-main" alt="Market">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/16415413556413588019_1" alt="Lanterns">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/16415413556413588019_2" alt="Street">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/16415413556413588019_3" alt="Spices">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/16415413556413588019_4" alt="Tea">
+        </div>
+    </div>
+
+    <div class="itinerary-box">
+        <h2 style="text-align:center; margin-bottom:40px; font-family:'Cinzel', serif;">Itinerary Overview</h2>
+        <div class="day-row"><div class="day-num">Day 1</div><div>Arrival in Cairo • Check-in Giza Hotel • Sound & Light Show</div></div>
+        <div class="day-row"><div class="day-num">Day 2</div><div>Paramotor Flight • Pyramids Visit • Desert Horse Riding</div></div>
+        <div class="day-row"><div class="day-num">Day 3</div><div>Cairo to Bahariya • Black Desert • White Desert Camping</div></div>
+        <div class="day-row"><div class="day-num">Day 4</div><div>Desert Sunrise • Return to Cairo • Flight to Aswan</div></div>
+        <div class="day-row"><div class="day-num">Day 5</div><div>Abu Simbel (Flight) • Nubian Village • Felucca Sail</div></div>
+        <div class="day-row"><div class="day-num">Day 6</div><div>Philae Temple • Check-in Nile Cruise • Sail to Kom Ombo</div></div>
+        <div class="day-row"><div class="day-num">Day 7</div><div>Edfu Temple • Esna Lock • Arrive in Luxor</div></div>
+        <div class="day-row"><div class="day-num">Day 8</div><div>East Bank: Karnak Temple • Luxor Temple</div></div>
+        <div class="day-row"><div class="day-num">Day 9</div><div>Hot Air Balloon • Valley of Kings • Fly to Sharm El Sheikh</div></div>
+        <div class="day-row"><div class="day-num">Day 10</div><div>Red Sea Boat Trip • Diving / Snorkeling</div></div>
+        <div class="day-row"><div class="day-num">Day 11</div><div>Relax • Farsha Mountain Lounge (Sunset) • Fly to Cairo</div></div>
+        <div class="day-row"><div class="day-num">Day 12</div><div>Egyptian Museum • Citadel • Khan el-Khalili • Departure</div></div>
+    </div>
 
 </div>
 
